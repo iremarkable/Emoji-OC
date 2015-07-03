@@ -15,6 +15,8 @@
 @property(nonatomic,strong,readonly) NSDictionary * emojiWithUnicodeDict;
 
 
++ (id)sharedInstance;
+
 -(NSString *)convertUnicodeToEmojiWithString:(NSString *)string;
 -(NSString *)convertEmojiToUnicodeWithString:(NSString *)string;
 

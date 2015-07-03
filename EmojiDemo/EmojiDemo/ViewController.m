@@ -20,7 +20,7 @@
     [super viewDidLoad];
 
     
-    EmojiUtils *utils = [[EmojiUtils alloc]init];
+    EmojiUtils *utils = [EmojiUtils sharedInstance];
     
     NSString *stringWithEmoji = @"It's a fine day.🐣😄";
     NSString *unicodeString = [utils convertEmojiToUnicodeWithString:stringWithEmoji];

@@ -1,13 +1,15 @@
 # Emoji-OC
 
  
-### 源码包行了近1000个Emoji表情，包含的最常用的Emoji表情以及一大部分冷门表情.
+### 源码包含了近1000个Emoji表情，全部最常用的Emoji表情以及一大部分冷门表情.
 
 ##使用说明：
 ### iOS支持表情的直接显示，但是为了兼容web以及Android等，上传到服务器的数据以及请求下来的数据都要做相应的数据转换
 
 ### 表情处理类：
-    EmojiUtils *utils = [[EmojiUtils alloc]init];
+		//使用单例，表情数据比较大
+        EmojiUtils *utils = [EmojiUtils sharedInstance];
+
  
 
 ### 带有表情的处理成为：U+XXXX格式 
@@ -26,7 +28,7 @@
     //[e]1f604[/e]
     
 ### 将服务器传递过来的指定格式的数据，转化为可以直接显示的数据：
-`注：格式为\U0001F423，因为改格式的效果等同于Emoji`
+`注：格式为\U0001F423，因为该格式的效果等同于Emoji`
     
     
     NSString *serverString = @"Join the team![e]1F423[/e]";
